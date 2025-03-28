@@ -10,11 +10,11 @@ In order to run the code files provided, clone this repository into your local m
 ```
 Create a virtual Python environment.
 ```
-> conda create -p venv python=3.11
+> python3 -m venv b21ee067
 ```
 Activate the environment and install the necessary Python libraries and packages.
 ```
-> conda activate venv/
+> source b21ee067/bin/activate
 > pip install -r requirements.txt
 ```
 

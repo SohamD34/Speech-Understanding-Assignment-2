@@ -2,11 +2,7 @@ import os
 import gdown
 import zipfile
 from utils import *
-
-print(os.getcwd())
 os.chdir('../../')
-print(os.getcwd())
-
 
 
 def download_data(url, dataset_name):

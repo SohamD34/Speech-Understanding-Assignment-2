@@ -8,3 +8,87 @@
 
 2025-03-28 09:19:47,415 - Accessing the Kaggle Hub API...
 2025-03-28 09:40:18,641 - Dataset file is downloaded at /home/raid3/.cache/kagglehub/datasets/hbchaitanyabharadwaj/audio-dataset-with-10-indian-languages/versions/1
+2025-03-28 19:03:34,399 - Dataset unzipped at data/audio_dataset/!
+2025-03-28 19:30:53,660 - MFCC features extracted and saved to data/audio_dataset/mel_features.csv
+2025-03-28 19:31:58,820 - MFCC features extracted and saved to data/audio_dataset/mel_features.csv
+2025-03-28 19:31:58,820 - MFCC features saved to data/audio_dataset/mel_features.csv
+2025-03-28 19:38:58,305 - MFCC features extracted and saved to data/audio_dataset/mel_features.csv
+2025-03-28 19:39:22,395 - MFCC features extracted and saved to data/audio_dataset/mel_features.csv
+2025-03-28 19:39:57,023 - MFCC features extracted and saved to data/audio_dataset/mel_features.csv
+2025-03-28 19:40:06,680 - Spectrograms generated and saved in 'scripts/Question 2/spectrograms/'
+2025-03-28 21:32:51,018 - MFCC features extracted for Telugu language
+2025-03-28 21:37:52,505 - MFCC features extracted for Marathi language
+2025-03-28 21:44:07,436 - MFCC features extracted for Urdu language
+2025-03-28 21:48:29,965 - MFCC features extracted for Malayalam language
+2025-03-28 21:53:31,720 - MFCC features extracted for Hindi language
+2025-03-28 21:58:55,538 - MFCC features extracted for Bengali language
+2025-03-28 22:02:38,096 - MFCC features extracted for Kannada language
+2025-03-28 22:07:42,105 - MFCC features extracted for Punjabi language
+2025-03-28 22:12:47,240 - MFCC features extracted for Gujarati language
+2025-03-28 22:17:24,140 - MFCC features extracted for Tamil language
+2025-03-28 22:17:31,774 - MFCC features extracted and saved to data/audio_dataset/mel_features.csv
+2025-03-28 22:17:41,345 - Spectrograms generated and saved in 'scripts/Question 2/spectrograms/'
+
+2025-03-29 05:26:17,218 - Performing Grid Search for SVC...
+2025-03-29 06:48:10,251 - Best Parameters for SVC: {'C': 1, 'kernel': 'rbf'}
+2025-03-29 06:48:10,251 - Training Accuracy: 0.8909
+2025-03-29 06:48:10,251 - Test Accuracy: 0.8647
+2025-03-29 06:48:10,251 -               precision    recall  f1-score   support
+
+           0       0.97      0.98      0.97      5423
+           1       0.41      0.37      0.39      5373
+           2       0.97      0.99      0.98      5177
+           3       0.98      0.97      0.98      4448
+           4       0.99      0.99      0.99      4758
+           5       0.98      0.98      0.98      5125
+           6       0.42      0.46      0.44      5299
+           7       0.99      0.99      0.99      4800
+           8       0.99      0.99      0.99      4606
+           9       0.98      0.98      0.98      6355
+
+    accuracy                           0.86     51364
+   macro avg       0.87      0.87      0.87     51364
+weighted avg       0.86      0.86      0.86     51364
+
+2025-03-29 06:48:10,251 - Performing Grid Search for RFC...
+2025-03-29 07:00:44,489 - Best Parameters for RFC: {'max_depth': 15, 'n_estimators': 50}
+2025-03-29 07:00:44,489 - Training Accuracy: 0.8953
+2025-03-29 07:00:44,489 - Test Accuracy: 0.8040
+2025-03-29 07:00:44,489 -               precision    recall  f1-score   support
+
+           0       0.89      0.96      0.92      5423
+           1       0.22      0.21      0.22      5373
+           2       0.93      0.98      0.95      5177
+           3       1.00      0.92      0.95      4448
+           4       0.99      0.96      0.97      4758
+           5       0.96      0.95      0.95      5125
+           6       0.24      0.24      0.24      5299
+           7       0.98      0.98      0.98      4800
+           8       0.98      0.95      0.96      4606
+           9       0.93      0.96      0.94      6355
+
+    accuracy                           0.80     51364
+   macro avg       0.81      0.81      0.81     51364
+weighted avg       0.80      0.80      0.80     51364
+
+2025-03-29 07:00:44,489 - Performing Grid Search for KNN...
+2025-03-29 07:01:35,807 - Best Parameters for KNN: {'n_neighbors': 9, 'weights': 'uniform'}
+2025-03-29 07:01:35,807 - Training Accuracy: 0.8967
+2025-03-29 07:01:35,807 - Test Accuracy: 0.8340
+2025-03-29 07:01:35,807 -               precision    recall  f1-score   support
+
+           0       0.97      0.97      0.97      5423
+           1       0.28      0.27      0.27      5373
+           2       0.97      0.99      0.98      5177
+           3       0.96      0.97      0.97      4448
+           4       0.99      0.98      0.99      4758
+           5       0.98      0.98      0.98      5125
+           6       0.27      0.27      0.27      5299
+           7       0.99      0.99      0.99      4800
+           8       0.99      0.99      0.99      4606
+           9       0.98      0.98      0.98      6355
+
+    accuracy                           0.83     51364
+   macro avg       0.84      0.84      0.84     51364
+weighted avg       0.83      0.83      0.83     51364
+

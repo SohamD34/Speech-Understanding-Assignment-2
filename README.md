@@ -40,6 +40,23 @@ The data directory should look like -
 ```
 data
 ├── audio_dataset
+│         └── archive.zip
+├── voxceleb1
+└── voxceleb2
+```
+
+Navigate to the source directory for Question 2.
+```
+> cd scripts/Question\ 2/
+```
+The ZIP file ```data/audio_dataset/archive.zip``` has to be unzipped using the following script.
+```
+> python data_ingestion.py
+```
+The data directory should now look like -
+```
+data
+├── audio_dataset
 │         └── Language Detection Dataset
 │                        ├── Bengali
 │                        ├── Gujarati
@@ -49,8 +66,20 @@ data
 ├── voxceleb1
 └── voxceleb2
 ```
-
-
-Navigate to the scource directory for Question 2.
+Run the ```mel_feature_extraction.py``` script to extract the Mel Frequency Cepstral Coefficients (MFCC) and get spectrograms for each audio file of each language.
 ```
-> cd scripts/Question\ 2/
+> python mel_feature_extraction.py
+```
+The MFCC features are saved at  ```data/audio_dataset/mel_features.csv```. The spectrograms are saved at ```scripts/Question 2/spectrograms```.
+
+### Task B
+
+To run the classifiers - SVM, RFC and KNN - run the ```classification.py``` script.
+```
+> python classification.py
+```
+All the results - best model parameters after Grid Search, training accuracy, testing accuracy, classification report - for the classification can be checked in the ```logs/question2.txt``` file.
+
+
+## Note
+For all the processes and subprocesses, logs are maintained at ```logs/question1.txt``` and ```logs/question2.txt```. They can be referred to understand the workflow.

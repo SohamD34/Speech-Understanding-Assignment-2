@@ -28,3 +28,29 @@ For this, download the VoxCeleb1 and VoxCeleb2 datasets from our data source usi
 ```
 You should be able to see a ```data``` folder with ```wav``` and ```aac``` folders for VoxCeleb1 and VoxCeleb2 datasets respectively.
 
+
+
+## Question 2
+The task is to extract MFCC Features from audio samples of 10 different Indian Languages and compare them.
+
+### Task A
+Download the Kaggle dataset at this URL - [Language Audio Dataset](https://www.kaggle.com/datasets/hbchaitanyabharadwaj/audio-dataset-with-10-indian-languages) in the location ```data/audio_dataset```.
+
+The data directory should look like -
+```
+data
+├── audio_dataset
+│         └── Language Detection Dataset
+│                        ├── Bengali
+│                        ├── Gujarati
+│                        ├── Hindi
+│                        .
+│                        .
+├── voxceleb1
+└── voxceleb2
+```
+
+
+Navigate to the scource directory for Question 2.
+```
+> cd scripts/Question\ 2/

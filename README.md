@@ -20,14 +20,59 @@ Activate the environment and install the necessary Python libraries and packages
 
 
 ## Question 1
+
+#### TASK 1
 The task is to enhance the speech of speakers in a multi-speaker environment.
 For this, download the VoxCeleb1 and VoxCeleb2 datasets from our data source using the ```data_ingestion.py``` script in the ```scripts``` folder.
 ```
 > cd scripts/
-> python data_ingestion.py
+> python 1.\ data_ingestion.py
 ```
-You should be able to see a ```data``` folder with ```wav``` and ```aac``` folders for VoxCeleb1 and VoxCeleb2 datasets respectively.
+You should be able to see a ```data``` folder with ```voxceleb1``` and ```voxceleb2``` folders for VoxCeleb1 and VoxCeleb2 datasets respectively. 
+You should also see ```voxceleb1_trial_pairs.txt``` containing the training trial pairs. And the corresponding ```voxceleb_trial_pairs.csv``` for more readable and easy access during future tasks.
 
+#### TASK 2
+For this task, we first download model checkpoint from [Model link](https://drive.usercontent.google.com/download?id=1-aE1NfzpRCLxA4GUxX9ITI3F9LlbtEGP&export=download&authuser=0) and save it at ```scripts/Question 1/models/wavlm_base/wavlm_large_finetune.pth``` location. 
+The directory structure should be like - 
+```
+scripts
+├── Question 1
+│       ├── models
+│       │      └── wavlm_base
+│       │            └── wavlm_large_finetune.pth
+│       ├── 1. data_ingestion.py
+.       ├── 2. speaker_verification.py
+.           .
+.           . 
+
+```
+
+To perform the testing of this model on VoxCeleb1 dataset, you can run the following script.
+```
+> python 2.\ speaker_verification.py
+```
+The output metrics can be observed in the logs at ```logs/question1.txt```.
+
+Now in order to finetune this model on VoxCeleb2 dataset, we have to run the following scripts.
+```
+> python 3.\ WavLM_finetuning.py
+```
+The script will first finetune the base WavLM model using LoRA on VoxCeleb2 dataset. Then it will evaluate the finetuned model on VoxCeleb1 dataset again. The output metrics of the testing can be observed at ```logs/question1/txt```.
+The metrics include AUC, accuracy, precision, recall, f1-score, EER and TAR @ 1% FAR.
+
+#### TASK 3 & 4
+Run the mixture.py first to create a data/mixtures directory containing mixture of utterances from VoxCeleb1 and VoxCeleb2.
+```
+> python mixture.py
+```
+The mixture dataset will be created at ```data/mixtures/``` folder.
+
+Now run the sepformer script using below command to first test it directly on the mixtures dataset.
+Then later, it tests the LoRA-finetuned WavLM model loaded in Sepformer architecture on the same dataset. 
+```
+> python 4.\ sepformer.py
+```
+The output accuracy metrics for both the cases can be observed at ```logs/question1.txt```.
 
 
 ## Question 2
@@ -71,6 +116,7 @@ Run the ```mel_feature_extraction.py``` script to extract the Mel Frequency Ceps
 > python mel_feature_extraction.py
 ```
 The MFCC features are saved at  ```data/audio_dataset/mel_features.csv```. The spectrograms are saved at ```scripts/Question 2/spectrograms```.
+
 
 ### Task B
 

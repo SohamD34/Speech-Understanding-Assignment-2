@@ -82,21 +82,21 @@ def load_trial_pairs(csv_path):
 
 if __name__ == '__main__':
 
-    # log_text('logs/question1.txt', 'Ingesting Vox Celeb 1 Dataset...\n')
-    # url = 'https://drive.google.com/file/d/1AC-Q8dEw1LTPdpEi5ofS04ZmZWdl8BBg/view?usp=drive_link'
-    # dataset_name = 'voxceleb1'
+    log_text('logs/question1.txt', 'Ingesting Vox Celeb 1 Dataset...\n')
+    url = 'https://drive.google.com/file/d/1AC-Q8dEw1LTPdpEi5ofS04ZmZWdl8BBg/view?usp=drive_link'
+    dataset_name = 'voxceleb1'
 
-    # download_data(url, dataset_name)
-    # extract_data('data/voxceleb1.zip')
-    # rename_dir('data/wav', 'data/voxceleb1')
+    download_data(url, dataset_name)
+    extract_data('data/voxceleb1.zip')
+    rename_dir('data/wav', 'data/voxceleb1')
 
-    # log_text('logs/question1.txt', 'Ingesting Vox Celeb 2 Dataset...\n')
-    # url = 'https://drive.google.com/file/d/1Onu4jzcyasrxTR1rRT9rl9AfkUrueM6o/view?usp=drive_link'
-    # dataset_name = 'voxceleb2'
+    log_text('logs/question1.txt', 'Ingesting Vox Celeb 2 Dataset...\n')
+    url = 'https://drive.google.com/file/d/1Onu4jzcyasrxTR1rRT9rl9AfkUrueM6o/view?usp=drive_link'
+    dataset_name = 'voxceleb2'
 
-    # download_data(url, dataset_name)
-    # extract_data('data/voxceleb2.zip')
-    # rename_dir('data/aac', 'data/voxceleb2')
+    download_data(url, dataset_name)
+    extract_data('data/voxceleb2.zip')
+    rename_dir('data/aac', 'data/voxceleb2')
     
 
     get_trial_pairs('data/voxceleb1_trial_pairs.txt', 'data/voxceleb1_trial_pairs.csv')

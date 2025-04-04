@@ -45,7 +45,7 @@ def get_mfcc_features(data_path):
 
 
     for language in os.listdir(data_path):
-        print('Converting language:', language) 
+        # log_text(f'Converting language: {language}') 
 
         # count = 0
         language_path = os.path.join(data_path, language)
